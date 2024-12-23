@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-section {
+            background-color: #000;
+            color: white;
+            min-height: 600px;
+            background-image: url('/img/IMAGE.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.4) 100%);
+        }
+        .hero-section > div {
+            position: relative;
+            z-index: 1;
+        }
+        .catalog-section {
+            background-color: #000;
+            color: white;
+            padding: 100px 0;
+        }
+        .workflow-section {
+            background-color: #000;
+            color: white;
+            padding: 100px 0;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="/img/IMAGE.svg" alt="Splice" class="h-8">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Sounds</a>
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Skills</a>
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Plugins</a>
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Studio</a>
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Community</a>
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Blog</a>
+                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Pricing</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="bg-white text-black px-4 py-2 rounded-full">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl font-bold mb-6">Step into the producer's playground</h1>
+                <p class="text-xl text-gray-300 mb-8">Explore the world's best sample library and an <br> unmatched marketplace of plugins and DAWs.</p>
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-2xl hover:bg-blue-700">Try free</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-2 text-center">About Catalog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div>
+                    <h3 class="text-4xl font-bold mb-4">A catalog so deep, it's dangerous.</h3>
+                    <p class="text-gray-300 mb-6">Expertly created and curated samples in any style imaginable. Start swimming in sound.</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-2xl hover:bg-blue-700">Explore Sounds</button>
+                </div>
+                <div>
+                    <img src="/img/IMAGE (1).png" alt="Catalog Preview" class="w-full rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="workflow-section">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <img src="/img/IMAGE (3).png" alt="Workflow" class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-4">A workflow that actually flows.</h3>
+                    <p class="text-gray-300">Preview samples in your track's key and tempo, drag and drop sounds into your DAW, and organize your favorite samples, MIDI and presets in one place.</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-full mt-6 hover:bg-blue-700">Workflow</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="/img/IMAGE (4).png" alt="Andrew Huang" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <p class="text-gray-600 mb-4">"I can always find what I'm looking for on Splice, whether it's the exact sound I want or just a bit of inspiration."</p>
+                    <p class="text-sm text-gray-800 font-medium">Andrew Huang</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="/img/IMAGE (5).png" alt="Producer 2" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <p class="text-gray-600 mb-4">"Finally a way to buy plugins that works. By paying a little at a time, producers can get legit access to the top VSTs."</p>
+                    <p class="text-sm text-gray-800 font-medium">KSHMR</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="/img/IMAGE (6).png" alt="Producer 3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <p class="text-gray-600 mb-4">"It's been fun to dive into Splice's creator community and explore tools that support my own creative process."</p>
+                    <p class="text-sm text-gray-800 font-medium">Kesha Lee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="text-sm text-gray-500"> 2022 Splice.com All Rights Reserved</div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-sm text-gray-500 hover:text-white">Terms of Use</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-white">Jobs</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-white">Contact</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-white">Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
